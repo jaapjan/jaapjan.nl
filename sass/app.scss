@@ -1,0 +1,166 @@
+// You custom settings file to override Foundation defaults
+@import "settings";
+
+// Comment out this import if you are customizing you imports below
+@import "foundation";
+
+// ----------------------------------------
+// Import specific parts of Foundation by commenting the import "foundation"
+// and uncommenting what you want below. You must uncomment the following if customizing
+
+// @import "compass/css3";
+// @import "foundation/settings";
+// @import "foundation/functions/all";
+
+// Control which mixins you have access too
+
+// @import "foundation/mixins/clearfix";
+// @import "foundation/mixins/css-triangle";
+// @import "foundation/mixins/font-size";
+
+// Must include next two for semantic grid to work
+
+// @import "foundation/mixins/respond-to";
+// @import "foundation/mixins/semantic-grid";
+
+// @import "modular-scale";
+// @import "foundation/common/globals";
+
+// Must include the grid for any responsiveness
+
+// @import "foundation/components/grid";
+
+// Control which common styles get compiled
+
+// @import "foundation/common/typography";
+// @import "foundation/common/forms";
+
+// Control which components you get if customizing
+
+// @import "foundation/components/modules/buttons";
+// @import "foundation/components/modules/tabs";
+// @import "foundation/components/modules/ui";
+// @import "foundation/components/modules/topbar";
+// @import "foundation/components/modules/navbar";
+@import "foundation/components/modules/orbit";
+// @import "foundation/components/modules/reveal";
+// @import "foundation/components/modules/offcanvas";
+
+// Media Queries Overrides
+// @import "foundation/components/modules/mqueries";
+@import "compass/css3/border-radius";
+
+// Basic
+body {
+	background: url(/images/background-pattern.png) repeat top left;	
+	height: 100%;
+	width: 100%;
+}
+body .wrapper {
+	background: url(/images/background.jpg) no-repeat top right;	
+	min-height: 100%;
+	// position: fixed;
+	width: 100%;
+	padding-top: 10%;
+}
+
+// Fonts
+h1,
+h2,
+h3 {
+	margin: 0;
+	color: #536980;
+	font-size: 2.5em;
+}
+
+h2 {
+	font-size: 1em;
+	margin-bottom: 0.5em;
+}
+
+h3 {
+	font-size: 1em;
+}
+p {
+	font-size: 0.9em;
+}
+// Contact card
+.card {
+	margin: 0 auto !important;
+	// border: 1px solid #dbd9d9;
+	// padding: 10px;
+	@include border-radius(10px, 10px);
+  @include clearfix();
+	max-width: 767px;
+
+	* {
+		//opacity: 1 !important;
+	}
+
+	.title {
+		background: #f2f2f2;
+		padding: 5px 30px;
+		border-bottom: 1px solid #fdfdfd;
+		@include border-top-radius(10px);
+	}
+	.content {
+		border-top: 1px solid #b2b2b2;
+		background: #e8e8e8;
+		padding: 10px 30px;
+	  @include clearfix();
+	}
+	.avatar {
+		background: #fff;
+		padding: 5px;
+		margin-right: 10px;
+		float: left;
+		@include border-radius(5px, 5px);
+	}
+	.social a {
+		font-size: 2em;
+		display: block;
+		margin-right: 5px;
+		float: left;
+	}
+
+}
+
+#slider {
+	max-width: 797px;
+}
+
+@media only screen and (max-width: 767px) {
+  /* Small Device Styles here */
+ 	// Contact card
+	.card {
+		margin: 0 auto !important;
+		// border: 1px solid #dbd9d9;
+		// padding: 10px;
+		// width: auto;
+	}
+}
+
+
+// Orbit magic
+// #slider {
+// }
+// #slider img {
+// 	min-height: 100%;
+// 	min-width: 200px;
+// 	width: 100%;
+// 	height: auto;
+// 	position: fixed;
+// 	top: 0;
+// 	left: 0;
+// }
+// .orbit-wrapper {
+//   .slider-nav span { @include opacity(0); @include single-transition(opacity, 400ms); }
+//   &:hover .slider-nav span { @include opacity(1); }
+// }
+// div.orbit-wrapper, 
+// div.slider-nav {
+// 	margin-top: 20%;
+// }
+// .timer {
+// 	display: none !important;
+// }
