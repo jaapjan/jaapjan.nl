@@ -6253,14 +6253,15 @@ p {
   float: left;
 }
 
-/* line 128, ../sass/app.scss */
-#slider {
-  max-width: 797px;
+/* line 131, ../sass/app.scss */
+.slider {
+  max-width: 798px;
+  background: #e8e8e8;
 }
 
 @media only screen and (max-width: 767px) {
   /* Small Device Styles here */
-  /* line 135, ../sass/app.scss */
+  /* line 139, ../sass/app.scss */
   .card {
     margin: 0 auto !important;
   }
